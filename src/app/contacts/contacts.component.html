@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-5 offset-md-4 mt-3">
+        <div class="card">
+            <div class="card-header text-white bg-info">
+                  <div class="card-title">
+                    <h3 class="title">{{ title }}
+                        <div class="float-right">
+                            <button class="btn btn-light mr-1" (click)="showAllFemale()">F</button>
+                            <button class="btn btn-light mr-1" (click)="showAllMale()">M</button>
+                            <button class="btn btn-light mr-1" (click)="showAllContact()">A</button>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let contact of contactsAll" >
+                        {{ contact.name }}
+                        <span class="badge badge-info float-right">{{ contact.contact }}</span>
+                    </li>           
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
